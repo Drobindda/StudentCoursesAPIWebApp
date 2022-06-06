@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student-Courses-Lab2-2022</title>
+</head>
+<body>
+    <h1>Informatics-2022-Lab2 Student-Courses</h1>
+    <h3>Add Course</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addCourse()">
+        <input type="text" id="add-name" placeholder="New Course">
+        <input type="text" id="add-description" placeholder="New Course Description">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm" style ="display: none">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateCourse()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-description">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tbody id="courses"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getCourses();
+    </script>
+</body>
+</html>

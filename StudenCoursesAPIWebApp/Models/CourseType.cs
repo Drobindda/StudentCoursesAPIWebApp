@@ -2,7 +2,7 @@
 {
     public class CourseType
     {
-        CourseType()
+        public CourseType()
         {
             Courses = new List<Course>();
         }

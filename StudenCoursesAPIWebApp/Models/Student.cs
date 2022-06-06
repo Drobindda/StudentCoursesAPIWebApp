@@ -2,7 +2,7 @@
 {
     public class Student
     {
-        Student()
+        public Student()
         {
             StudentCourses = new List<StudentCourse>();
         }

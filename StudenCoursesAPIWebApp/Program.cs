@@ -10,12 +10,17 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.UseRouting();
+app.MapGet("/", () => "Hello World!");
 app.UseEndpoints(endpoint =>
 {
     endpoint.MapControllers();
 });
 
 
-app.MapGet("/", () => "Hello World!");
+
 
 app.Run();

@@ -8,6 +8,7 @@ namespace StudentCoursesAPIWebApp.Models
         public virtual DbSet<StudentCourse> StudentCourses { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<CourseType> CourseTypes { get; set; }
+        public virtual DbSet<RateType> RateTypes { get; set; }
 
         public StudentCoursesAPIContext(DbContextOptions<StudentCoursesAPIContext> options)
             : base(options)
